@@ -2,11 +2,10 @@
 title: JSSDK 微信接口与 Java 结合
 date: 2017-02-22 19:53:44
 tags: [WeChat , Java]
+cover: "/images/wechat.png"
 ---
 
 # JSSDK微信接口 Java接入 转发分享信息
-
-[TOC]
 
 -------------------
 ><a href="http://dwz.cn/1KsMyS" target="_blank"> [ JSSDK文档 ]</a> 微信JS-SDK是微信公众平台面向网页开发者提供的基于微信内的网页开发工具包。   
@@ -14,11 +13,12 @@ tags: [WeChat , Java]
 ><a href="http://dwz.cn/3WfAJS" target="_blank">  [获取token文档 ]</a> JS-SDK获取access_token文档
 >**ChaoS_Zhang** , 更多信息 , 具体请参考[GitHub][0].<a href="#"> [t7_chaos@163.com]</a>  .
 
-##流程图
+## 流程图
 
->流程图：
+> 流程图：
 
-```flow
+```mermaid
+flowchart LR
 st=>start: 开始
 e=>end: 结束
 op1=>operation: 获取本地存储token
@@ -44,7 +44,7 @@ cond2(yes)->e
 
 
 ## 代码块
->###WXTokenServiceImpl 业务逻辑
+>### WXTokenServiceImpl 业务逻辑
 
 ``` java
 	
@@ -272,7 +272,7 @@ cond2(yes)->e
 	}
 
 ```
->###WXToken 微信公众号token实体
+> ### WXToken 微信公众号token实体
 ``` java
 	/**
 	 * @Author ChaoS_Zhang t7_chaos@163.com 
