@@ -1,7 +1,10 @@
 ---
 title: Java 多线程实现方式
 date: 2019-07-13 19:52:35
-tags: [Java , 多线程]
+tags: 
+    - "Java"
+    - "多线程"
+cover: "/images/java.png"
 ---
 
 ### 继承 Thread

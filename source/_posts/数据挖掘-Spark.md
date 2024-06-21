@@ -2,6 +2,7 @@
 title: 数据挖掘-Spark
 date: 2017-03-28 22:12:43
 tags: [DataMining,Tools,Spark]
+cover: "/images/datamining.jpeg"
 ---
 
 > Spark : 借鉴了MapReduce之上发展而来的，继承了其分布式并行计算的优点并改进了MapReduce明显的缺陷

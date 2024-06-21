@@ -1,7 +1,9 @@
 ---
 title: Java编程规范
 date: 2021-04-23 14:15:55
-tags: Java
+tags: 
+    - "Java"
+cover: "/images/java.png"
 ---
 
 # Java开发规范

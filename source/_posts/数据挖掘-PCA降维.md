@@ -2,6 +2,7 @@
 title: 数据挖掘-PCA降维
 date: 2017-03-13 20:22:06
 tags: DataMining
+cover: "/images/datamining.jpeg"
 ---
 
 > 若存在N个M维的训练集，N与M不小于百万级，该如何处理？

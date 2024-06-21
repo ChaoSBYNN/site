@@ -6,6 +6,7 @@ tags:
     - "Java"
 categories:
     - "Program"
+cover: "/images/spring.png"
 ---
 
 # Spring 状态机

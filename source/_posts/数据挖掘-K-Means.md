@@ -2,6 +2,7 @@
 title: 数据挖掘-K-Means
 date: 2017-03-21 22:02:41
 tags: DataMining
+cover: "/images/datamining.jpeg"
 ---
 
 > 类内数据点越近越好，类间数据点越远越好。

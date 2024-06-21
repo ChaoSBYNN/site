@@ -2,6 +2,7 @@
 title: 数据挖掘-SVM
 date: 2017-03-09 22:06:30
 tags: DataMining
+cover: "/images/datamining.jpeg"
 ---
 
 > SVM：寻找一条最优的分界线使得它到两边的距离 **margin** 都最大。

@@ -2,6 +2,7 @@
 title: 数据挖掘-Apriori
 date: 2017-03-16 22:13:14
 tags: DataMining
+cover: "/images/datamining.jpeg"
 ---
 
 > 从海量数据中挖掘可信频繁项集

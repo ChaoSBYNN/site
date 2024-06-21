@@ -2,6 +2,7 @@
 title: 数据挖掘-KNN
 date: 2017-03-06 21:53:20
 tags: DataMining
+cover: "/images/datamining.jpeg"
 ---
 
 > KNN 近邻算法：测量不同特征值之间距离进行分类
