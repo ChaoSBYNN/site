@@ -158,10 +158,10 @@ home_banner:
     # Social links
     links:
       github: https://github.com/ChaoSBYNN
-      instagram: # your Instagram URL
+      instagram: https://www.instagram.com/entropy_42_zhang
       zhihu: https://www.zhihu.com/people/Bee7zEBubChaoS
-      twitter:  # your twitter URL
-      email:  # your email
+      twitter:  https://x.com/Bee7zEBub
+      email:  t7_chaos@163.com
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
