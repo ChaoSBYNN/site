@@ -2,6 +2,7 @@
 title: Linux 下zip压缩操作
 date: 2017-02-22 19:52:35
 tags: Linux
+cover: "/images/linux.png"
 ---
 
 ###linux下zip压缩与解压命令为：

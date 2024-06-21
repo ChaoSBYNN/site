@@ -2,6 +2,7 @@
 title: Linux 下MySQL安装
 date: 2017-02-27 19:05:36
 tags: Linux
+cover: "/images/linux.png"
 ---
 
 > 注意：如果安装失败，可尝试关闭selinux和防火墙再行测试。

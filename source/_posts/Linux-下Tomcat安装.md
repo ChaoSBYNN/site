@@ -2,6 +2,7 @@
 title: Linux 下Tomcat安装
 date: 2017-02-26 21:05:17
 tags: Linux
+cover: "/images/linux.png"
 ---
 
 ### 第一步 下载tomcat

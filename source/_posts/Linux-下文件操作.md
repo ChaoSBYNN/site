@@ -2,6 +2,7 @@
 title: Linux 下文件操作
 date: 2017-02-21 20:39:22
 tags: Linux
+cover: "/images/linux.png"
 ---
 
 ### linux下文件操作命令为：
