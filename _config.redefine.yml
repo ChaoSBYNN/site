@@ -115,8 +115,8 @@ home_banner:
   image: 
     # light: /images/wallhaven-wqery6-light.webp # light mode
     # dark: /images/wallhaven-wqery6-dark.webp # dark mode
-    light: /images/wallpaper.png # light mode
-    dark: /images/wallpaper.png # dark mode
+    light: /images/wallpaper.webp # light mode
+    dark: /images/wallpaper.webp # dark mode
   # Home banner title
   title: Spike Zhang
   lang: en-US
