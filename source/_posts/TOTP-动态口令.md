@@ -31,3 +31,5 @@ TOTP基于HOTP实现，它结合一个私钥与当前时间戳，使用一个密
 * [Time-Based One-Time Password (TOTP) — Java Implementation](https://medium.com/@rakesh.open.source/time-based-one-time-password-totp-java-implementation-82a472bd6bf9)
 * [基于 TOTP 实现多重身份(Multi-factor)认证](https://zhuanlan.zhihu.com/p/641587128)
 * [What is TOTP and why does it matter?](https://stytch.com/blog/what-is-totp/)
+* [A medium dive on the Time-based One-time Passwords (TOTP) spec](https://allthingsauth.com/2018/04/20/a-medium-dive-on-the-totp-spec/)
+* [What is a Time-based One-time Password (TOTP)?](https://www.twilio.com/docs/glossary/totp)
