@@ -362,10 +362,10 @@ comment:
       region: # Twikoo region. can be empty
     # Giscus comment system. See https://giscus.app/
     giscus:
-      repo: ChaoSBYNN/site-giscus # Github repository name e.g. EvanNotFound/hexo-theme-redefine
-      repo_id: R_kgDOMPRmQA # Github repository id
+      repo: ChaoSBYNN/chaosbynn.github.io # Github repository name e.g. EvanNotFound/hexo-theme-redefine
+      repo_id: MDEwOlJlcG9zaXRvcnk4MTE4ODQ2NA== # Github repository id
       category: Announcements # Github discussion category
-      category_id: DIC_kwDOMPRmQM4CgclD # Github discussion category id
+      category_id: DIC_kwDOBNbWcM4CgcsE # Github discussion category id
       mapping: title # Which value to use as the unique identifier for the page. e.g. pathname, url, title, og:title. DO NOT USE og:title WITH PJAX ENABLED since pjax will not update og:title when the page changes
       strict: 0 # Whether to enable strict mode. e.g. 0, 1
       reactions_enabled: 1 # Whether to enable reactions. e.g. 0, 1
