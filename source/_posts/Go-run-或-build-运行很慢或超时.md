@@ -6,7 +6,7 @@ categories:
     - "Program"
     - "Go"
 cover: "/images/go/go.webp"
-excerpt: "Go 环境变量配置"
+excerpt: "Go 默认镜像地址访问超时"
 ---
 
 ## Step 1 查看环境变量
