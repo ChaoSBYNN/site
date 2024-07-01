@@ -27,6 +27,8 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-redefine": "^2.6.4",
+    "node-pre-gyp-github": "^2.0.0",
+    "nodejs-jieba": "^0.1.2",
     "parcel": "^2.12.0"
   }
 }

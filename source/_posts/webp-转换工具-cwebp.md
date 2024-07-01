@@ -14,7 +14,7 @@ excerpt: "webp图片转换工具"
 
 ## 安装
 
-`https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html`
+[cwebp](https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html)
 
 ## 配置
 
