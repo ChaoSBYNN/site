@@ -9,7 +9,7 @@ categories:
     - "ORM"
     - "MyBatis"
 cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/mybatis-plus.png"
-excerpt: "Git Tips"
+excerpt: "MyBatisPlus通过注入器实现比例操作"
 ---
 
 > `BaseMapper` 默认不提供批量插入
