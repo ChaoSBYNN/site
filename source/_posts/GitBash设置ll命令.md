@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 ---
 # GIT 配置 ll命令
 

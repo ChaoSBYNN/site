@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "Git"
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 excerpt: "Git Tips"
 ---
 

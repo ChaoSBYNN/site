@@ -6,7 +6,7 @@ tags:
     - "Java"
 categories:
     - "Program"
-cover: "/images/java.png"
+cover: "/images/java.jpg"
 ---
 > 💡 安装后需配置环境变量
 

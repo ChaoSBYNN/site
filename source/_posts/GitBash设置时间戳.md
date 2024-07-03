@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 ---
 
 > 平时工作中，可能会同时处理几件事情，其中有一件要用到 `terminal`，有时候需要在 `terminal` 连续执行多次同个命令，但有时候你地工作被打断，等再回来看 `terminal` 的时候，就不确定工作被打断之前是否执行了命令，因为命令执行没有时间戳

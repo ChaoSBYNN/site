@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 ---
 
 ## 清空默认的全局 user.name 和 user.email

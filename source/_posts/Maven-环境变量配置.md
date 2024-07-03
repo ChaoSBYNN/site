@@ -7,7 +7,7 @@ tags:
     - "Java"
 categories:
     - "Program"
-cover: "/images/maven.png"
+cover: "/images/maven.jpg"
 ---
 
 `Maven`的环境变量配置主要涉及到设置`MAVEN_HOME`和更新系统的`PATH`环境变量。以下是在Windows和Linux/macOS系统上配置`Maven`环境变量的步骤：

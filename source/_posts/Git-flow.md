@@ -2,7 +2,7 @@
 title: Git flow
 date: 2017-04-15 22:58:27
 tags: Git
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 ---
 
 ### Production|Master 分支 ： 合并读取

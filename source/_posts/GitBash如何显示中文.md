@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.jpeg"
+cover: "/images/git.webp"
 ---
 
 # git bash如何显示中文

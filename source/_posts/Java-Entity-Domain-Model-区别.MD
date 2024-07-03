@@ -3,7 +3,7 @@ title: Java Entity Domain Model 区别
 date: 2019-07-13 19:52:35
 tags: 
     - "Java"
-cover: "/images/java.png"
+cover: "/images/java.jpg"
 ---
 
 ### Entity

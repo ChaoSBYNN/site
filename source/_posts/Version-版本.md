@@ -6,7 +6,7 @@ tags:
     - "DevOps"
 categories:
     - "Program"
-cover: "/images/devops.jpeg"
+cover: "/images/devops_3.webp"
 ---
 
 # Version
