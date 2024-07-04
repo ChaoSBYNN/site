@@ -11,6 +11,8 @@ cover: "/images/devops_3.webp"
 
 # Version
 
+![version](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/version.png)
+
 > 语义化版本 : 版本格式 -> 主版本号.次版本号.修订号
 
 - 主版本号：当你做了不兼容的API 修改。
