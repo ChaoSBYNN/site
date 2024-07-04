@@ -20,3 +20,6 @@ date: 2024-07-04 12:42:35
 
 
 ![2024 米兰 WKC世界赛 ](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/kendo/kendo_6.jpg)
+
+
+![2024 米兰 WKC世界赛 ](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/kendo/kendo_8.jpg)
