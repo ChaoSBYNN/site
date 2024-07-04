@@ -196,9 +196,10 @@ navbar:
     Archives: 
       path: /archives 
       icon: fa-regular fa-archive # can be empty
-    Photos: 
-      path: /cameras
+    Cameras: 
       icon: fa-regular fa-camera
+      submenus: #取名随意
+        Kendo: /kendo
     About: 
       icon: fa-regular fa-user
       submenus:
