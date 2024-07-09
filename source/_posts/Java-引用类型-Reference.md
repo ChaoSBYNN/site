@@ -7,6 +7,7 @@ categories:
     - "Program"
     - "Java"
 cover: "/images/java.jpg"
+excerpt: "强引用, 软引用, 弱引用, 虚引用"
 ---
 
 ![Reference](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/reference/reference_1.webp)
