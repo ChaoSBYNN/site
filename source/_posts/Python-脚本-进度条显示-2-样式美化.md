@@ -17,6 +17,8 @@ excerpt: "进度条美化"
 > 首字符 `-` 为背景
 > 尾字符 `━` 为实际进度
 
+![效果](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/process_bar.png)
+
 ```python
 import paramiko
 from tqdm import tqdm
