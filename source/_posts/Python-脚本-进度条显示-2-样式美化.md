@@ -13,11 +13,18 @@ excerpt: "进度条美化"
 
 `tqdm` 增加 `bar_format` , `ascii` 配置
 
-> 注意 `ascii="-━"` 需两个字符
-> 首字符 `-` 为背景
-> 尾字符 `━` 为实际进度
+### 进度条背景样式
+
+`ascii="-━"` 需两个字符
+
+* 首字符 `-` 为背景
+* 尾字符 `━` 为实际进度
 
 ![效果](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/process_bar.png)
+
+### python 执行命令日志同一行刷新
+
+* 加入`\r` `desc=f'\rUploading {os.path.basename(local_path)}'`
 
 ```python
 import paramiko
@@ -60,7 +67,7 @@ bar_format = "{desc}: {percentage:3.0f}%|{bar:42}| {n_fmt}/{total_fmt} [{elapsed
 with tqdm(total=local_file_size,
           unit='B',
           unit_scale=True,
-          desc=f'Uploading {os.path.basename(local_path)}',
+          desc=f'\rUploading {os.path.basename(local_path)}',
           bar_format=bar_format,
           ascii="-━",
           ncols=42,
