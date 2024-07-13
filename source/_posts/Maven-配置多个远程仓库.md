@@ -7,7 +7,7 @@ tags:
     - "Java"
 categories:
     - "Program"
-cover: "/images/maven.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/maven.jpg"
 excerpt: "Maven 私有远程仓库与中央远程仓库集成"
 ---
 配置Maven Settings.xml文件

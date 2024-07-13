@@ -6,7 +6,7 @@ tags:
     - "Java"
 categories:
     - "Program"
-cover: "/images/spring.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring.png"
 ---
 
 ## Why

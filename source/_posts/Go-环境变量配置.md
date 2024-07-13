@@ -5,7 +5,7 @@ tags: Go
 categories:
     - "Program"
     - "Go"
-cover: "/images/go/go.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/go.webp"
 excerpt: "Go 环境变量配置"
 ---
 

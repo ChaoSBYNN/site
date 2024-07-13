@@ -2,6 +2,7 @@
 title: 选择 www 或非 www URL 作为域名
 date: 2017-02-13 23:36:36
 tags: HTTP
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/http.jpg"
 ---
 > 选择非 www 或 www 作为网址，对于网站持有者是一个反复出现的问题。本页将会提供了一些有用的相关建议。
 

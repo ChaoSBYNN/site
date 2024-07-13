@@ -2,7 +2,7 @@
 title: Maven-项目命名
 date: 2021-04-22 16:21:15
 tags: Maven
-cover: "/images/maven.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/maven.jpg"
 ---
 
 # Maven项目命名规范

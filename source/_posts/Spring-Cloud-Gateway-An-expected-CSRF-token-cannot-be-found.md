@@ -8,7 +8,7 @@ categories:
     - "Program"
     - "Java"
     - "Spring"
-cover: "/images/spring.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring.png"
 excerpt: "An expected CSRF token cannot be found"
 ---
 

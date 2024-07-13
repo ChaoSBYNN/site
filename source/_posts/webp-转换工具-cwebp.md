@@ -6,7 +6,7 @@ categories:
     - "Program"
     - "Tools"
     - "Image"
-cover: "/images/tools/webp.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/tools/webp.jpg"
 excerpt: "webp图片转换工具"
 ---
 

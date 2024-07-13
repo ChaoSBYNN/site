@@ -7,7 +7,7 @@ categories:
     - "Program"
     - "Linux"
     - "CentOS"
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 excerpt: "yum 使用时 http://mirrorlist.centos.org 无法请求"
 ---
 

@@ -6,7 +6,7 @@ tags:
     - "代码质量"
 categories:
     - "Program"
-cover: "/images/code.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/code.jpg"
 ---
 
 # 【译】如何用人类的方式进行 Code Review

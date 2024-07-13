@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "Network"
-cover: "/images/http.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/http.jpg"
 excerpt: "实现使用自定义域名访问局域网程序"
 ---
 

@@ -5,7 +5,7 @@ tags: Go
 categories:
     - "Program"
     - "Go"
-cover: "/images/go/go.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/go/go.webp"
 excerpt: "Go 默认镜像地址访问超时"
 ---
 

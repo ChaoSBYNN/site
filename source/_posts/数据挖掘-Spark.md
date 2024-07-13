@@ -2,7 +2,7 @@
 title: 数据挖掘-Spark
 date: 2017-03-28 22:12:43
 tags: [DataMining,Tools,Spark]
-cover: "/images/datamining.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/datamining.jpeg"
 ---
 
 > Spark : 借鉴了MapReduce之上发展而来的，继承了其分布式并行计算的优点并改进了MapReduce明显的缺陷
@@ -19,7 +19,7 @@ cover: "/images/datamining.jpeg"
 
 # Spark生态系统
  
-![](/images/2017_03_21_1.bmp)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_03_21_1.bmp)
 
 1. Spark SQL : 允许直接处理RDD，也可查询Hive、HBase等外部数据源。
 2. Spark Streaming ： 实时数据流处理组件（Storm）。
@@ -53,7 +53,7 @@ cover: "/images/datamining.jpeg"
 
 # Spark运行流程
 
-![](/images/2017_03_21_2.bmp)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_03_21_2.bmp)
 
 1. 提交一个Application后，首先构建基本运行环境，即由Driver创建一个SparkContext，由SparkContext负责和资源管理器（Cluster Manager）的通信，以及资源的申请、任务的分配和监控等。SparkContext会向资源管理器注册并申请运行Executor的资源；
 2. 资源管理器为Executor分配资源，启动Executor进程，Executor运行情况随着“心跳”发送到资源管理器上；

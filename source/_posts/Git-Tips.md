@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "Git"
-cover: "/images/git.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git.webp"
 excerpt: "Git Tips"
 ---
 

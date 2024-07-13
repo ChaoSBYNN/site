@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git.webp"
 ---
 
 # git bash如何显示中文

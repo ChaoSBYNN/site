@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git.webp"
 ---
 # GIT 配置 ll命令
 

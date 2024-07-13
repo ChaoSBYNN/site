@@ -7,7 +7,7 @@ tags:
     - "算法"
 categories:
     - "Program"
-cover: "/images/totp.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/totp.png"
 ---
 
 ## OTP/HOTP/TOTP

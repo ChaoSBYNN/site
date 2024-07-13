@@ -2,7 +2,7 @@
 title: Git flow
 date: 2017-04-15 22:58:27
 tags: Git
-cover: "/images/git.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git.webp"
 ---
 
 ### Production|Master 分支 ： 合并读取
@@ -20,4 +20,4 @@ cover: "/images/git.webp"
 ### Hotfix分支 ： 紧急修复
 当我们在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release
 
-![](/images/2017_04_15_0.png)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_04_15_0.png)

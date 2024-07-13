@@ -2,7 +2,7 @@
 title: 数据挖掘-MapReduce
 date: 2017-03-14 22:31:42
 tags: DataMining
-cover: "/images/datamining.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/datamining.jpeg"
 ---
 
 > 可以通过分布式进行大数据量的计算的软件框架

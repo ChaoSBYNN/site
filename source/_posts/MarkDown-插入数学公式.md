@@ -2,7 +2,7 @@
 title: MarkDown 插入数学公式
 date: 2017-02-28 20:08:20
 tags: [ MarkDown , LaTeX ] 
-cover: "/images/markdown.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/markdown.jpeg"
 ---
 
 ### 使用Google Chart的服务器

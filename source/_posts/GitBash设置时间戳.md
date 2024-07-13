@@ -5,7 +5,7 @@ tags:
     - "Git"
 categories:
     - "Program"
-cover: "/images/git.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git.webp"
 ---
 
 > 平时工作中，可能会同时处理几件事情，其中有一件要用到 `terminal`，有时候需要在 `terminal` 连续执行多次同个命令，但有时候你地工作被打断，等再回来看 `terminal` 的时候，就不确定工作被打断之前是否执行了命令，因为命令执行没有时间戳
@@ -33,10 +33,10 @@ PS1="$PS1"'\[\033[0m\]'		# reset style
 PS1="$PS1"'\n'			    # new line
 ```
 
-![配置](/images/git/git1.png)
+![配置](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git/git1.png)
 ### 效果图
 
-![效果图](/images/git/git2.png)
+![效果图](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/git/git2.png)
 
 ## 附录
 

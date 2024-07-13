@@ -5,7 +5,7 @@ tags:
     - "Linux"
 categories:
     - "Program"
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 ---
 
 ## 端口开放

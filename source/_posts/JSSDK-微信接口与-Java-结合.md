@@ -2,7 +2,7 @@
 title: JSSDK 微信接口与 Java 结合
 date: 2017-02-22 19:53:44
 tags: [WeChat , Java]
-cover: "/images/wechat.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/wechat.png"
 ---
 
 # JSSDK微信接口 Java接入 转发分享信息

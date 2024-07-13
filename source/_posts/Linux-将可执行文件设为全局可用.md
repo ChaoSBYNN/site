@@ -5,7 +5,7 @@ tags: Linux
 categories:
     - "Program"
     - "Linux"
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 excerpt: "Linux 源码安装的程序 全局执行"
 ---
 

@@ -2,7 +2,7 @@
 title: MarkDown 支持的语言
 date: 2017-02-27 19:17:16
 tags: MarkDown
-cover: "/images/markdown.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/markdown.jpeg"
 ---
 
 |名称|关键字|

@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "HTTP"
-cover: "/images/http.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/http.jpg"
 excerpt: "CSRF CORS 区别"
 ---
 

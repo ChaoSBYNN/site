@@ -2,7 +2,7 @@
 title: Linux 下MySQL安装
 date: 2017-02-27 19:05:36
 tags: Linux
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 ---
 
 > 注意：如果安装失败，可尝试关闭selinux和防火墙再行测试。
@@ -40,7 +40,7 @@ cover: "/images/linux.png"
 	useradd -r -g mysql mysql 
 ```
 
- ![](/images/2017_02_27_1.jpg)
+ ![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_27_1.jpg)
 
 ##### 第二步：新建MySQL所需要的目录
 
@@ -100,7 +100,7 @@ cover: "/images/linux.png"
  
 安装完毕的截图如下
 
- ![](/images/2017_02_27_2.jpg) 
+ ![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_27_2.jpg) 
 
 ### 安装MySQL后设置
 
@@ -161,7 +161,7 @@ cover: "/images/linux.png"
 	chkconfig --level 35 mysqld on
 ```
 
- ![](/images/2017_02_27_3.jpg) 
+ ![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_27_3.jpg) 
 
 ##### 第六步：检查mysql服务是否启动
 
@@ -169,7 +169,7 @@ cover: "/images/linux.png"
 	netstat -tulnp | grep 3306   
 ```
 
- ![](/images/2017_02_27_4.jpg)
+ ![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_27_4.jpg)
  
 到此服务器mysql已经安装并已经启动，接下来修改MySQL用户root的密码，登录测试
 
@@ -179,6 +179,6 @@ cover: "/images/linux.png"
 
 ##### 第七步：mysql命令登录测试
 
- ![](/images/2017_02_27_5.jpg) 
+ ![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_27_5.jpg) 
 
 mysql安装完毕，成功登录

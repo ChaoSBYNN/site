@@ -2,7 +2,7 @@
 title: JavaScript 生成时间戳
 date: 2017-02-22 19:53:06
 tags: JavaScript
-cover: "/images/javascript.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/javascript.jpeg"
 ---
 
 >JS生成时间戳三种方式

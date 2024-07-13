@@ -2,7 +2,7 @@
 title: Linux 下JDK安装
 date: 2017-02-21 19:55:23
 tags: Linux
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 ---
 
 > 注意：如果系统中存在JDK 或者 OpenJDK，先卸载。

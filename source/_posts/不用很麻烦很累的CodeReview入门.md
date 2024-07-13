@@ -6,10 +6,10 @@ tags:
     - "代码质量"
 categories:
     - "Program"
-cover: "/images/code.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/code_review.jpg"
 ---
 
-![](/images/code/code1.png)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/code/code1.png)
 
 > 注：本文仅关注 Code Review 的实行，不讨论 “为什么要 Code Review” 或 “Code Review 是否有价值” 这类话题。
 

@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "Java"
-cover: "/images/java.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/java.png"
 excerpt: "强引用, 软引用, 弱引用, 虚引用"
 ---
 

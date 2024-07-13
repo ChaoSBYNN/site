@@ -2,7 +2,7 @@
 title: Linux 下Tomcat安装
 date: 2017-02-26 21:05:17
 tags: Linux
-cover: "/images/linux.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux.png"
 ---
 
 ### 第一步 下载tomcat
@@ -12,7 +12,7 @@ cover: "/images/linux.png"
  ```
  或者在本地下载好tomcat安装包
 
-![](/images/2017_02_26_01.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_01.jpg)
 
 ### 第二步 将tomcat移动放置到 /usr/local/ 目录下
 
@@ -25,7 +25,7 @@ cover: "/images/linux.png"
 	tar -xvzf /usr/local/apache-tomcat-*.*.**.tar.gz
 ```
 
-![](/images/2017_02_26_02.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_02.jpg)
 
 ### 第四步 设置tomcat开机自启动，
 
@@ -35,7 +35,7 @@ cover: "/images/linux.png"
 	vi /usr/local/apache-tomcat-*.*.**/bin/startup.sh
 ```
 
-![](/images/2017_02_26_03.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_03.jpg)
 
 添加
 
@@ -45,7 +45,7 @@ cover: "/images/linux.png"
 	#processname: tomcat
 ```
 
-![](/images/2017_02_26_04.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_04.jpg)
 
 编辑/usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 
@@ -53,7 +53,7 @@ cover: "/images/linux.png"
 vi /usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 ```
 
-![](/images/2017_02_26_05.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_05.jpg)
 
 搜索export关键字，加入如下行：
 
@@ -63,7 +63,7 @@ vi /usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 	export CATALINA_TMPDIR=/usr/local/apache-tomcat-*.*.**
 ```
 
-![](/images/2017_02_26_06.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_06.jpg)
 
 将tomcat加入开机自启动
 
@@ -71,7 +71,7 @@ vi /usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 	vi /etc/rc.d/rc.local
 ```
 
-![](/images/2017_02_26_07.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_07.jpg)
 
 加入如下内容：
 
@@ -80,7 +80,7 @@ vi /usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 	/usr/local/apache-tomcat-*.*.**/bin/startup.sh start
 ```
 
-![](/images/2017_02_26_08.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_08.jpg)
 
 ### 第五步 测试Tomcat运行
 
@@ -94,7 +94,7 @@ vi /usr/local/apache-tomcat-*.*.**/bin/catalina.sh
 
 打开浏览器测试：
 
-![](/images/2017_02_26_09.jpg) 
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_09.jpg) 
 
 执行
 
@@ -124,12 +124,12 @@ vi /usr/local/apache-tomcat-*.*.**/conf/server.xml
 	<Connector executor="tomcatThreadPool" port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
 ```
 
-![](/images/2017_02_26_10.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_10.jpg)
 
 重启tomcat生效。
 
 测试Tomcat：
 
-![](/images/2017_02_26_11.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_02_26_11.jpg)
  
 tomcat安装完毕。

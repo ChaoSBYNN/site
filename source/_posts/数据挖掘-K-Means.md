@@ -2,7 +2,7 @@
 title: 数据挖掘-K-Means
 date: 2017-03-21 22:02:41
 tags: DataMining
-cover: "/images/datamining.jpeg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/datamining.jpeg"
 ---
 
 > 类内数据点越近越好，类间数据点越远越好。
@@ -24,4 +24,4 @@ cover: "/images/datamining.jpeg"
 4. 与前一次计算得到k个聚类中心比较，如果聚类中心发生变化，转步骤2，否则转步骤
 5. 得出结果
 
-![](/images/2017_03_05_1.jpg)
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2017_03_05_1.jpg)

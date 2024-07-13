@@ -8,7 +8,7 @@ categories:
     - "Program"
     - "Java"
     - "Spring"
-cover: "/images/spring.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring.png"
 excerpt: "接口拦截过滤放行 免鉴权"
 ---
 

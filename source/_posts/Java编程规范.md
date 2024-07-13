@@ -3,7 +3,7 @@ title: Java编程规范
 date: 2021-04-23 14:15:55
 tags: 
     - "Java"
-cover: "/images/java.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/java.png"
 ---
 
 # Java开发规范
@@ -347,7 +347,7 @@ return '\ufeff' + content; // byte order mark					| Good，对于非打印字符
 
 ## 6 如何避免陷入(牛角尖、瓶颈、自大、自卑、思维僵化)
 
-<video id="video" controls="" loop="loop" autoplay="autoplay" src="/images/2021-04-23-0.mp4" />
+<video id="video" controls="" loop="loop" autoplay="autoplay" src="https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/2017/2021-04-23-0.mp4" />
 
 
 ## 参考

@@ -6,7 +6,7 @@ tags:
     - "DevOps"
 categories:
     - "Program"
-cover: "/images/devops_3.webp"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/devops_3.webp"
 ---
 
 # Version

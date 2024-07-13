@@ -7,7 +7,7 @@ tags:
     - "Idea"
 categories:
     - "Program"
-cover: "/images/idea.png"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/idea.png"
 ---
 
 > 不同版本Idea会有差异
@@ -15,15 +15,15 @@ cover: "/images/idea.png"
 {% tabs Setup版本 %}
 <!-- tab 新版Idea-->
 新版 `File` -> `New Projects Setup` -> `Settings for New Projects`
-![New Setup](/images/maven/new-version-maven.png)
+![New Setup](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/maven/new-version-maven.png)
 <!-- endtab -->
  
 <!-- tab 旧版Idea-->
 旧版 `File` -> `Other Settings` -> `Settings for New Projects`
  
-![Old Setup](/images/maven/old-version-maven.png)
+![Old Setup](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/maven/old-version-maven.png)
 <!-- endtab -->
 {% endtabs %}
 
 搜索 `mvn` 或 `Build, Execution, Deployment` -> `Build Tools` -> `Maven`
-![Settings](/images/maven/maven-settings.png)
+![Settings](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/maven/maven-settings.png)

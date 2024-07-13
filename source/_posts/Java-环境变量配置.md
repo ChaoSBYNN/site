@@ -6,7 +6,7 @@ tags:
     - "Java"
 categories:
     - "Program"
-cover: "/images/java.jpg"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/java.png"
 ---
 > 💡 安装后需配置环境变量
 
