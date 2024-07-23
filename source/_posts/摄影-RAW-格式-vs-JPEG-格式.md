@@ -9,6 +9,8 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/photograp
 excerpt: "RAW,JPEG 照片格式比较"
 ---
 
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/photography/2024-07-23/2024072301.webp)
+
 RAW 格式和 JPEG 格式在图像处理方面有显著的差异，了解这些差异有助于解释为什么有时候 RAW 格式的照片看起来不如 JPEG 格式的照片好看。以下是对这两种格式的详细比较，涵盖它们的特点、优缺点，以及为什么 RAW 照片可能不如 JPEG 照片好看的一些原因。
 
 ## RAW 格式 vs JPEG 格式
@@ -90,6 +92,16 @@ JPEG 图像是经过相机内部处理和优化后的结果，通常具有以下
 
 - **曝光设置**：可能需要手动调整曝光，RAW 图像在拍摄时可能没有完全展现场景细节。
 - **白平衡设置**：RAW 图像的白平衡可能需要在后期处理时进行调整，JPEG 图像通常已经优化了白平衡。
+
+## 不同厂家的 RAW 文件
+
+RAW格式文件是一个统称，它并不像JPG照片一样，后缀名就是.JPG或者.JPEG，每个相机品牌所拍摄的RAW格式文件都有不同的后缀名。
+
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/photography/2024-07-23/2024072302.webp)
+
+比如佳能的后缀名是.CR2或者.CR3，尼康的后缀名是.NEF，索尼的后缀名是.ARW，富士的后缀名是.RAF，松下的后缀名是.RW2，宾得的后缀名是.PEF，徕卡的后缀名是.DNG，哈苏的后缀名是.3FR等等
+
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/photography/2024-07-23/2024072303.webp)
 
 ## 如何让 RAW 文件看起来更好?
 
