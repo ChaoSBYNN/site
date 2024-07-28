@@ -1,7 +1,9 @@
 ---
 title: Linux 工具 htop 源码安装
 date: 2024-07-26 12:32:49
-tags: Linux
+tags: 
+    - "Linux"
+    - "Tools"
 categories:
     - "Program"
     - "Linux"
@@ -9,7 +11,7 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/l
 excerpt: "Linux 通过源码安装 htop"
 ---
 
-![htop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/htop-2.0.png)
+![btop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/htop-2.0.png)
 
 ### 1. 准备环境
 
