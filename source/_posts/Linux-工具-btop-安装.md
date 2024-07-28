@@ -11,8 +11,9 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/l
 excerpt: "Linux 安装 btop"
 ---
 
-![htop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/btop.png)
+![btop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/btop.png)
 
+[btop](https://github.com/aristocratos/btop)
 ## Debain 安装
 
 ```sh

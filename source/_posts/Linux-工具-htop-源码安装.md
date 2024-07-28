@@ -11,7 +11,9 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/l
 excerpt: "Linux 通过源码安装 htop"
 ---
 
-![btop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/htop-2.0.png)
+![htop](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/linux/htop-2.0.png)
+
+[htop](https://htop.dev/)
 
 ### 1. 准备环境
 
