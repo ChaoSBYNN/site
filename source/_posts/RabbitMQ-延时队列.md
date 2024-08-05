@@ -6,7 +6,7 @@ tags:
 categories:
     - "Program"
     - "RabbitMQ"
-cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/banner/RabbitMQ.png)"
+cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/banner/RabbitMQ.png"
 excerpt: "RabbitMQ 延时队列 Delay Queue"
 ---
 
