@@ -31,6 +31,6 @@
     "hexo-theme-redefine": "^2.8.2",
     "node-pre-gyp-github": "^2.0.0",
     "nodejs-jieba": "^0.2.1",
-    "parcel": "^2.13.3"
+    "parcel": "^2.14.1"
   }
 }
