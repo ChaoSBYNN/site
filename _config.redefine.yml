@@ -199,7 +199,6 @@ navbar:
     Cameras: 
       icon: fa-regular fa-camera
       submenus: #取名随意
-        Kendo: /kendo
         Camera: /masonry/
     About: 
       icon: fa-regular fa-user
