@@ -43,12 +43,11 @@ I'm using IntelliJ IDEA, and it installs a command-line tool called `idea`.
 
 我正在使用 IntelliJ IDEA，它提供了一个名为 idea 的命令行工具。
 
-[source,shell]
-----
+```shell
 cd service
 idea build.gradlew
 # idea pom.xml if you're using Apache Maven
-----
+```
 
 If you're using  Visual Studio Code, be sure to install the https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack[_Spring Boot Extension Pack_] on the _Visual Studio Code Marketplace_.
 
@@ -63,10 +62,10 @@ To that end, the Spring Initializr generated a https://github.com/docker/compose
 为此，Spring Initializr 生成了一个 Docker Compose compose.yml 文件，其中包含了 Postgres 定义，Postgres 是一个优秀的 SQL 数据库。
 
 .the Docker Compose file, `compose.yaml`
-[source,yaml]
-----
-include::compose.yaml[]
-----
+
+```shell
+link:compose.yaml[role=include]
+```
 
 Even better, Spring Boot is configured to automatically run the Docker Compose (`docker compose up`) configuration  when the Spring Boot application starts up. No need to configure connectivity details like `spring.datasource.url` and `spring.datasource.password`, etc. It's all done with Spring Boot's amazing  autoconfiguration. Ya love to see it! And, never wanting to leave a mess, Spring Boot will shut down the Docker containers on application shutdown, too.
 
@@ -84,19 +83,17 @@ This works because, again, Spring is super quick to startup... _Except_, that is
 
 将属性添加到 application.properties
 
-[source,properties]
------
+```conf
 spring.docker.compose.lifecycle-management=start_only
------
+```
 
 We'll start with a simple record.
 
 我们将从一个简单的实体开始。
 
-[source,java]
-----
-include::src/main/java/com/example/service/Customer.java[]
-----
+```shell
+link:src/main/java/com/example/service/Customer.java[role=include]
+```
 
 I love Java records! And you should too! Don't sleep on records. This innocuous little `record` isn't just a better way to do something like Lombok's `@Data` annotation does, it's actually part of a handful of features that, culminating in Java 21 and taken together, support something called _data-oriented programming_.
 
@@ -126,10 +123,9 @@ So, we'll use `sealed` types. Sealed types are a new sort of access control or v
 
 因此，我们使用 sealed 类型。封闭类型是一种新的访问控制或可见性修饰符。
 
-[source,java]
-----
-include::src/main/java/com/example/service/Loan.java[]
-----
+```shell
+link:src/main/java/com/example/service/Loan.java[role=include]
+```
 
 In the example, we're explicitly stipulating that there are two implementations of `Loan` in the system: `SecuredLoan` and `UnsecuredLoan`. Classes are open for subclassing by default, which violates the guarantees implied by a sealed hierarchy. So, we explicitly make the `SecuredLoan` `final`. The `UnsecuredLoan` is implemented as a record, and is implicitly final.
 
@@ -143,23 +139,20 @@ Now, let's say I wanted to display a message for each type of `Loan`. I'll code 
 
 现在，假设我想为每种 Loan 类型显示一条消息。我会编写一个方法。这是最初的实现尝试。
 
-[source,java]
-----
-
-	@Deprecated
-	String badDisplayMessageFor(Loan loan) {
-		var message = "";
-		if (loan instanceof SecuredLoan) {
-			message = "good job! ";
-		}
-		if (loan instanceof UnsecuredLoan) {
-			var usl = (UnsecuredLoan) loan;
-			message = "ouch! that " + usl.interest() + "% interest rate is going to hurt!";
-		}
-		return message;
-	}
-
-----
+```java
+@Deprecated
+String badDisplayMessageFor(Loan loan) {
+    var message = "";
+    if (loan instanceof SecuredLoan) {
+        message = "good job! ";
+    }
+    if (loan instanceof UnsecuredLoan) {
+        var usl = (UnsecuredLoan) loan;
+        message = "ouch! that " + usl.interest() + "% interest rate is going to hurt!";
+    }
+    return message;
+}
+```
 
 This works, sort of. But it's not carrying its weight.
 
@@ -169,44 +162,37 @@ We can clean it up. Let's take advantage of pattern matching, like this:
 
 我们可以改进它。利用模式匹配，像这样：
 
-[source,java]
------
-
-	@Deprecated
-	String notGreatDisplayMessageFor(Loan loan) {
-		var message = "";
-		if (loan instanceof SecuredLoan) {
-			message = "good job! ";
-		}
-		if (loan instanceof UnsecuredLoan usl) {
-			message = "ouch! that " + usl.interest() + "% interest rate is going to hurt!";
-		}
-		return message;
-	}
-
------
+```java
+    @Deprecated
+    String notGreatDisplayMessageFor(Loan loan) {
+        var message = "";
+        if (loan instanceof SecuredLoan) {
+            message = "good job! ";
+        }
+        if (loan instanceof UnsecuredLoan usl) {
+            message = "ouch! that " + usl.interest() + "% interest rate is going to hurt!";
+        }
+        return message;
+    }
+```
 
 Better. Note that we're using pattern matching to match the shape of the object and then extract the definitively cast-able thing into a variable, `usl`. We don't even really need the `usl` variable, though, do we. Instead, we want to dereference the `interest` variable. So we can change the pattern matching to extract that variable, like this.
 
 更好。注意我们使用模式匹配来匹配对象的形状，然后将明确可转换的对象提取到变量 usl 中。其实我们不真正需要变量 usl，对吧？我们想要引用 interest 变量。因此，我们可以改变模式匹配来直接提取该变量，像这样。
 
-[source,java]
------
-
-	@Deprecated
-	String notGreatDisplayMessageFor(Loan loan) {
-		var message = "";
-		if (loan instanceof SecuredLoan) {
-			message = "good job! ";
-		}
-		if (loan instanceof UnsecuredLoan(var interest) ) {
-			message = "ouch! that " + interest + "% interest rate is going to hurt!";
-		}
-		return message;
-	}
-
------
-
+```java
+    @Deprecated
+    String notGreatDisplayMessageFor(Loan loan) {
+        var message = "";
+        if (loan instanceof SecuredLoan) {
+            message = "good job! ";
+        }
+        if (loan instanceof UnsecuredLoan(var interest) ) {
+            message = "ouch! that " + interest + "% interest rate is going to hurt!";
+        }
+        return message;
+    }
+```
 
 What happens if I comment out one of the branches? Nothing! The compiler doesn't care.  We're not handling one of the critical paths through which this code could pass.
 
@@ -216,15 +202,14 @@ Likewise, I have this value stored in a variable, `message`, and I'm assigning i
 
 同样，我将一个值存储在变量 message 中，并将其作为某条件的副作用进行赋值。如果我能直接返回某个表达式而不是中间值，那不是很好吗？让我们看看使用智能 switch 表达式的更清晰实现，这是 Java 中的另一种新特性。
 
-[source,java]
-----
-	String displayMessageFor(Loan loan) {
-		return switch (loan) {
-			case SecuredLoan sl -> "good job! ";
-			case UnsecuredLoan(var interest) -> "ouch! that " + interest + "% interest rate is going to hurt!";
-		};
-	}
-----
+```java
+    String displayMessageFor(Loan loan) {
+        return switch (loan) {
+            case SecuredLoan sl -> "good job! ";
+            case UnsecuredLoan(var interest) -> "ouch! that " + interest + "% interest rate is going to hurt!";
+        };
+    }
+```
 
 This version uses smart switch expressions to return a value and pattern matching. If you comment out one of the branches, the compiler will bark, because - thanks to sealed types - it knows that you haven't exhausted all possible options. Nice! The compiler is doing a lot of work for us! The result is both cleaner and more expressive. Mostly.
 
@@ -250,28 +235,25 @@ Add `schema.sql` and `data.sql`.
 
 应用程序的 DDL schema.sql
 
-[source,java]
-----
-include::src/main/resources/schema.sql[]
-----
+```java
+link:src/main/resources/schema.sql[role=include]
+```
 
 .some sample data for the application, `data.sql`
 
 应用程序的样本数据 data.sql
 
-[source,java]
-----
-include::src/main/resources/data.sql[]
-----
+```java
+link:src/main/resources/data.sql[role=include]
+```
 
 Make sure to tell Spring Boot to run the SQL files on startup by adding the following property to `application.properties`:
 
 通过将以下属性添加到 application.properties 中，告诉 Spring Boot 在启动时运行 SQL 文件：
 
-[source,properties]
-----
+```java
 spring.sql.init.mode=always
-----
+```
 
 Reload the application: CMD+Shift+F9, on macOS. On my computer, that reload is about 1/3rd the time, or 66% less, than it takes to restart both the JVM and the application itself. Huge.
 
@@ -329,10 +311,9 @@ We added `OpenAI` support on the Spring Initializr so Spring AI is already on th
 
 一个 AI 驱动的 Spring MVC 控制器
 
-[source,java]
-----
-include::src/main/java/com/example/service/StoryController.java[]
-----
+```shell
+link:src/main/java/com/example/service/StoryController.java[role=include]
+```
 
 Pretty straightforward! Inject Spring AI's `ChatClient`, use it to send a request to the LLM, get the response, and return it as JSON to the HTTP client.
 
@@ -350,7 +331,7 @@ CMD+Shift+F9 to reload the application, and then visit the endpoint: `http://loc
 
 我浏览器中的 JSON 响应，启用了 JSON 格式化插件。
 
-image::{images-url}story-time-ai-response.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/story-time-ai-response.png)
 
 There it is! We live in an age of miracles! The age of the freaking singularity! You can do anything now.
 
@@ -364,9 +345,7 @@ But it did take a while. And that has scalability implications for our applicati
 
 但这确实花了一段时间。这对我们的应用程序有可扩展性的影响。在幕后，当我们向我们的 LLM 发出请求时，我们正在进行网络调用。在代码的深处，有一个 java.net.Socket，我们从中获得了一个 java.io.InputStream，代表来自服务的数据的 byte 数组。我不知道你是否还记得直接使用 InputStream。这是一个例子：
 
-// :: show a while loop reading from an InputStream one byte at a time::
-[source,java]
-----
+```java
     try (var is = new FileInputStream("afile.txt")) {
         var next = -1;
         while ((next = is.read()) != -1) {
@@ -374,7 +353,7 @@ But it did take a while. And that has scalability implications for our applicati
             // do something with read
         }
     }
-----
+```
 
 See that part where we read bytes in from the `InputStream` by calling `InputStream.read`? We call that a *blocking operation*. If we call `InputStream.read` on line four, then we must wait until the call returns until we can get to line five.
 
@@ -408,10 +387,9 @@ What if we could have our non-blocking cake and eat it too? With https://openjdk
 
 此示例演示创建 1000 个线程并在每个线程上 sleep 400 毫秒，同时注意这 1000 个线程中的第一个的名称。
 
-[source,java]
-----
-include::src/main/java/com/example/service/Threads.java[]
-----
+```shell
+link:src/main/java/com/example/service/Threads.java[role=include]
+```
 
 We're using the `Thread.ofPlatform` factory method to create regular  ol' platform threads, identical in nature to the threads we've created basically since Java's debut in the 1990's. The program creates 1,000 threads. In each thread, we sleep for 100 milliseconds, four times. In between, we test if we're on the first of the 1000 threads, and if we are, we note the current thread's name by adding it to a set. A set dedupes its elements; if the same name appears more than once, there'll still only be one element in the set.
 
@@ -437,10 +415,9 @@ And there's a new virtual thread executor as well: `Executors.newVirtualThreadPe
 
 还有一个新的虚拟线程执行器：Executors.newVirtualThreadPerTaskExecutor。太好了！如果你正在使用 Spring Boot，将系统中的这种类型的默认 bean 替换为非常简单。Spring Boot 将引入它并改用它。很容易。但是如果你在使用 Spring Boot 3.2，你当然在使用 Spring Boot 3.2，对吧？你意识到每个版本只支持大约一年，对吧？确保查看任何给定 Spring 项目的支持政策。如果你在使用 3.2，那么你只需要将一个属性添加到 application.properties 中，我们将为你插入虚拟线程支持。
 
-[source,properties]
-----
+```java
 spring.threads.virtual.enabled=true
-----
+```
 
 Nice! No code changes required. And now you should see much improved scalability, and might be able to scale down some of the instances in your load balancer, if your services are IO bound. My suggestion? Tell your boss you're gonna save the company a ton of cash but insist you want that money in your paycheck. Then deploy this change. Voilà!
 
@@ -470,15 +447,7 @@ Then we have C++...
 
 然后我们有 C++...
 
-ifdef::backend-pdf[]
-image::{images-url}gross.png[]
-endif::[]
-
-ifndef::backend-pdf[]
-image::{images-url}gross.gif[]
-endif::[]
-
-
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/gross.gif)
 
 C++ is disgusting! Moving on...
 
@@ -512,7 +481,7 @@ Then.. we have Python. And this, well this makes me very sad indeed! I _love_ Py
 
 然后..我们有 Python。而这，嗯，这确实让我非常难过！我爱 Python！我从 1990 年代开始使用 Python！比尔·克林顿是总统当我第一次学习 Python 时！但这些数字不 是很棒。想想看。75.88。我们就四舍五入到 76。我数学不太好。但你知道谁数学好吗？该死的 Python！让我们问它。
 
-image::{images-url}python-doing-math.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/python-doing-math.png)
 
 38! That means that if you ran a program in Java, and the generation of the energy required to run it creates a bit of carbon that ends up  trapped in the atmosphere, raising the temperature, and that heightened temperature in turn kills ONE tree, then the equivalent program in Python would kill THIRTY-EIGHT trees! That's a forest! That's worse than Bitcoin! We need to do something about this, and soon. I don't know what, but something.
 
@@ -574,27 +543,27 @@ One suggested, from our friend  that we should play this elevator music from the
 
 Goldeneye 有一些了不起的电梯音乐！
 
-image::{images-url}adinn-elevator-music.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/adinn-elevator-music.png)
 
 One response suggested that having a beeping sound would be useful. Couldn't agree more. My stupid microwave will make a _ding!_ sound when it's done. Why couldn't my multi-million line compiler?
 
 有一个回应建议有一个哔哔声会很有用。完全同意。我的愚蠢微波炉在完成时会发出 叮！ 声。我的多百万行编译器为什么不行呢？
 
 ._DING!_
-image::{images-url}ivan-beeps.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/ivan-beeps.png)
 
 
 And then we got this response, from another one of my favorite doctors, https://twitter.com/fniephaus[Dr. Niephaus], who works on the GraalVM team. He said that adding elevator music would only just fix the symptoms, and not the cause of the problem, which is making GraalVM even more efficient in terms of time and memory.
 
 然后我们得到了这个回应，来自我最喜欢的专家之一，Dr. Niephaus，他在 GraalVM 团队工作。他说增加电梯音乐只会修复问题的症状，而不是导致问题的原因，即使 GraalVM 在时间和内存方面更加高效。
 
-image::{images-url}doctor-niephaus.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/doctor-niephaus.png)
 
 Ok. But he did share this promising prototype!
 
 好吧。但他确实分享了这个有前景的原型！
 
-image::{images-url}graalvm-prototype.png[]
+![-](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/spring/graalvm-prototype.png)
 
 I'm sure it'll get merged any day now...
 
@@ -608,8 +577,7 @@ Run it. It'll fail because, again, we're living that `git clone` &amp; run lifes
 
 运行它。它会失败，因为，我们生活在 git clone 然后运行的生活方式中！我们没有指定任何连接凭证！所以，用环境变量运行它，指定你的 SQL 数据库连接详细信息。这是我在我的机器上使用的脚本。这只适用于类 Unix 操作系统，并且适用于 Maven 或 Gradle。
 
-[source,shell]
-----
+```shell
 #!/usr/bin/env bash
 
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost/mydatabase
@@ -620,17 +588,15 @@ SERVICE=.
 MVN=$SERVICE/target/service
 GRADLE=$SERVICE/build/native/nativeCompile/service
 ls -la $GRADLE && $GRADLE || $MVN
-
-----
+```
 
 On my machine, it starts up in ~100 milliseconds! Like a rocket! And, obviously, it would be much faster still if I were using something like Spring Cloud Function to build AWS Lamba-style functions-as-a-service, because I wouldn't need for example to package an HTTP server. Indeed, if pure startup speed were _all_ that I really wanted, then I might even use Spring's amazing support for https://www.youtube.com/watch?v=dMhpDdR6nHw&t=2658s[Project CRaC]. That's neither here no there. I don't really care all that much about that because this is a standalone, long-lived service. What I care about is the resource usage, as represented by the https://en.wikipedia.org/wiki/RSS[Resident Set Size (RSS)]. Note the process identifier (PID) - it'll be in the logs. If the PID is, let's say, `55`, then get the RSS like this using the `ps` utility, available on virtually all Unixes:
 
 在我的机器上，它在大约 100 毫秒内启动！像火箭一样！显然，如果我使用的是 Spring Cloud Function 来构建 AWS Lambda 风格的函数即服务（FaaS），因为我不需要打包 HTTP 服务器，它会更快。事实上，如果纯粹的启动速度是我真正想要的全部，那么我甚至可能使用 Spring 对 Project CRaC 的惊人支持。那不是这里的重点。我并不真正关心那个，因为这是一个独立的、长寿命的服务。我关心的是资源使用情况，由 驻留集大小 (RSS) 代表。注意进程标识符 (PID) -- 它会在日志中。如果 PID 是，比方说，55，那么使用 ps 实用程序获取 RSS，几乎在所有 Unix 上都可用：
 
-[source,shell]
-----
+```shell
 ps -o rss 55
-----
+```
 
 It'll dump out a number in kilobytes;  divide by a thousand and you'll get the number in megabytes. On my machine, it takes just over 100MB to run. You can't run Slack in that tiny amount of memory! I bet you've got individual browser tabs in Chrome taking that much, or more!
 
