@@ -164,15 +164,26 @@ home_banner:
     style: default # default, reverse, center
     # Social links
     links:
-      github: https://github.com/ChaoSBYNN
-      instagram: https://www.instagram.com/entropy_42_zhang
-      zhihu: https://www.zhihu.com/people/Bee7zEBubChaoS
-      twitter:  https://x.com/Bee7zEBub
-      email:  t7_chaos@163.com
+      - name: github
+        url: https://github.com/ChaoSBYNN
+        icon: fa-brands fa-github
+      - name: instagram
+        url: https://www.instagram.com/entropy_42_zhang
+        icon: fa-brands fa-instagram
+      - name: zhihu
+        url: https://www.zhihu.com/people/Bee7zEBubChaoS
+        icon: fa-brands fa-zhihu
+      - name: twitter
+        url: https://x.com/Bee7zEBub
+        icon: fa-brands fa-x-twitter
+      - name: email
+        url: mailto:t7_chaos@163.com
+        icon: fa-solid fa-envelope
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
-      weixin:  # your Wechat QRcode image URL
+      - name: weixin
+        image:  # your Wechat QRcode image URL
       # ...... # you can add more
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
