@@ -175,7 +175,7 @@ home_banner:
         icon: fa-brands fa-zhihu
       - name: twitter
         url: https://x.com/Bee7zEBub
-        icon: fa-brands fa-x-twitter
+        icon: fa-brands fa-twitter
       - name: email
         url: mailto:t7_chaos@163.com
         icon: fa-solid fa-envelope
