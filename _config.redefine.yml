@@ -81,12 +81,16 @@ global:
   single_page: true
   # Whether to enable Preloader.
   preloader: true
-  # Whether to enable open graph
-  open_graph: true
   # Google Analytics
   google_analytics:
     enable: false # Whether to enable Google Analytics
     id:  # Google Analytics Measurement ID
+# Whether to enable open graph
+  open_graph:
+    enable: true
+    # 下面两项按需填写，不填就留空
+    image: /images/avatar.jpg
+    description: 
 # SITE CUSTOMIZATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
     
 
@@ -199,7 +203,6 @@ navbar:
     Cameras: 
       icon: fa-regular fa-camera
       submenus: #取名随意
-        Kendo: /kendo
         Camera: /masonry/
     About: 
       icon: fa-regular fa-user
