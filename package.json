@@ -30,7 +30,7 @@
     "hexo-theme-redefine": "^2.9.0",
     "hexo-theme-landscape": "^1.1.0",
     "node-pre-gyp-github": "^2.0.0",
-    "parcel": "^2.14.2",
+    "parcel": "^2.16.4",
     "nodejs-jieba": "^0.3.0"
   }
 }
