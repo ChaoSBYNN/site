@@ -17,6 +17,8 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/h
 
 ## 二、为什么会有这个问题（传统读取的拷贝开销）
 
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/zerocopy/zerocopy0.png)
+
 以"从磁盘读文件并发送到网络"为例,传统方式（read() + write()）通常经历 4 次拷贝 + 4 次上下文切换：
 
 ```
@@ -34,6 +36,7 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/h
 ## 三、实现原理
 
 ### 1. mmap + write
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/zerocopy/zerocopy1.png)
 
 用 `mmap()` 把内核缓冲区和用户进程的地址空间映射到同一块物理内存,省掉"内核 → 用户"的 CPU 拷贝（②）。
 
@@ -46,6 +49,8 @@ cover: "https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/h
 
 ### 2. sendfile（核心方案）
 
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/zerocopy/zerocopy2.png)
+
 `sendfile()` 系统调用直接在内核态完成"文件 → socket"的传输,应用完全不需要碰数据。
 
 ```
@@ -56,11 +61,15 @@ sendfile(fd_in, fd_out)：
 * 只需 2 次上下文切换、2 次 DMA + 1 次 CPU 拷贝。
 * 真正"零拷贝"的版本：当网卡支持 SG-DMA（Scatter-Gather DMA,分散/聚集 DMA）,CPU 只把描述信息（文件位置、长度）传给 socket 缓冲区,连最后一次 CPU 拷贝也省掉,DMA 直接从 page cache 把数据搬到网卡。
 
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/zerocopy/zerocopy3.png)
+
 ```
 磁盘 →DMA→ page cache（CPU 仅传递元数据）→SG-DMA→ 网卡
 ```
 
 ### 3. splice
+
+![](https://raw.githubusercontent.com/ChaoSBYNN/image-hosting/main/program/zerocopy/zerocopy4.png)
 
 Linux 2.6 引入的 `splice()`,在两个文件描述符之间建立管道,数据在内核内部搬移,不经过用户态内存。
 
